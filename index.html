@@ -5,95 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Системные требования</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #090b10;
+            color: #9ba1a6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
+            padding: 20px;
         }
-        .container {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            max-width: 700px;
-            width: 90%;
+
+        .card-wrapper {
+            position: relative;
+            max-width: 680px;
+            width: 100%;
+            border-radius: 18px;
+            padding: 1.5px;
+            /* Градиентная рамка как на референсе: темный верх и оранжево-синий низ */
+            background: linear-gradient(
+                180deg, 
+                rgba(255, 255, 255, 0.08) 0%, 
+                rgba(255, 255, 255, 0.04) 55%, 
+                #ff5500 85%, 
+                #3b82f6 100%
+            );
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 4px 25px rgba(255, 85, 0, 0.12);
         }
+
+        .card {
+            background-color: #10141d;
+            border-radius: 16.5px;
+            padding: 36px 40px;
+        }
+
         h1 {
-            text-align: center;
             color: #ffffff;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
         }
+
+        .subtitle {
+            color: #8b949e;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #333;
-        }
+
         th {
-            background-color: #252525;
-            color: #76b900; /* Фирменный зеленый оттенок для атмосферы */
-            font-size: 1.1em;
+            text-align: left;
+            color: #6e7681;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
-        tr:hover {
-            background-color: #2a2a2a;
+
+        td {
+            padding: 16px 0;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         }
-        .warning {
-            background-color: #3a1515;
-            border-left: 5px solid #ff3333;
-            color: #ffcccc;
-            padding: 15px;
-            border-radius: 4px;
-            font-weight: bold;
-            text-align: center;
-            font-size: 1.1em;
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comp-name {
+            color: #c9d1d9;
+            font-weight: 500;
+        }
+
+        .spec-min {
+            color: #8b949e;
+        }
+
+        .spec-max {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .amd-note {
+            background: rgba(255, 85, 0, 0.08);
+            border: 1px solid rgba(255, 85, 0, 0.25);
+            color: #ff8c5a;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 520px) {
+            .card {
+                padding: 24px 20px;
+            }
+            th, td {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Системные требования</h1>
-    
-    <table>
-        <thead>
-            <tr>
-                <th>Компонент</th>
-                <th>Минимальные</th>
-                <th>Максимальные</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Процессор</strong></td>
-                <td>Intel Core i3</td>
-                <td>Intel i4</td>
-            </tr>
-            <tr>
-                <td><strong>Видеокарта</strong></td>
-                <td>NVIDIA GTX 960 Super</td>
-                <td>NVIDIA RTX 2060</td>
-            </tr>
-            <tr>
-                <td><strong>Оперативная память</strong></td>
-                <td>8 GB DDR2</td>
-                <td>16 GB DDR5</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="card-wrapper">
+    <div class="card">
+        <h1>Системные требования</h1>
+        <p class="subtitle">Оптимизированная конфигурация железа для стабильной работы и мгновенного отклика системы.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Минимальные</th>
+                    <th>Максимальные</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="comp-name">Процессор</td>
+                    <td class="spec-min">Intel Core i3</td>
+                    <td class="spec-max">Intel i4</td>
+                </tr>
+                <tr>
+                    <td class="comp-name">Видеокарта</td>
+                    <td class="spec-min">GTX 960 Super</td>
+                    <td class="spec-max">RTX 2060</td>
+                </tr>
+                <tr>
+                    <td class="comp-name">Оперативная память</td>
+                    <td class="spec-min">DDR2 8 GB</td>
+                    <td class="spec-max">DDR5 16 GB</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <div class="warning">
-        ⚠️ Примечание: А в AMD пусть идет нахуй.
+        <div class="amd-note">
+            А кто с AMD идет нафиг
+        </div>
     </div>
 </div>
 
