@@ -16,37 +16,12 @@
             color: #9ba1a6;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-            gap: 20px;
         }
 
-        /* Верхняя черная плашка с иконкой */
-        .top-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background-color: #000000;
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #ffffff;
-            padding: 8px 18px 8px 12px;
-            border-radius: 999px;
-            font-size: 15px;
-            font-weight: 500;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .top-badge svg {
-            width: 20px;
-            height: 20px;
-            fill: #9ba1a6;
-            flex-shrink: 0;
-        }
-
-        /* Основная карточка */
         .card-wrapper {
             position: relative;
             max-width: 680px;
@@ -67,16 +42,6 @@
             background-color: #10141d;
             border-radius: 16.5px;
             padding: 36px 40px;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            display: block;
         }
 
         h1 {
@@ -147,20 +112,8 @@
 </head>
 <body>
 
-<!-- Черная плашка сверху -->
-<div class="top-badge">
-    <svg viewBox="0 0 24 24" xmlns="http://w3.org">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-    </svg>
-    <span>Системные требования</span>
-</div>
-
-<!-- Основная карточка -->
 <div class="card-wrapper">
     <div class="card">
-        <!-- Положи файл batman.png в ту же папку, что и index.html -->
-        <img src="batman.png" alt="Персонаж" class="hero-image">
-
         <h1>Системные требования</h1>
         <p class="subtitle">Оптимизированная конфигурация железа для стабильной работы и мгновенного отклика системы.</p>
         
