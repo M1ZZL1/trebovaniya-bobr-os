@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системные требования</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            width: 90%;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+        th {
+            background-color: #252525;
+            color: #76b900; /* Фирменный зеленый оттенок для атмосферы */
+            font-size: 1.1em;
+        }
+        tr:hover {
+            background-color: #2a2a2a;
+        }
+        .warning {
+            background-color: #3a1515;
+            border-left: 5px solid #ff3333;
+            color: #ffcccc;
+            padding: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Системные требования</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Компонент</th>
+                <th>Минимальные</th>
+                <th>Максимальные</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Процессор</strong></td>
+                <td>Intel Core i3</td>
+                <td>Intel i4</td>
+            </tr>
+            <tr>
+                <td><strong>Видеокарта</strong></td>
+                <td>NVIDIA GTX 960 Super</td>
+                <td>NVIDIA RTX 2060</td>
+            </tr>
+            <tr>
+                <td><strong>Оперативная память</strong></td>
+                <td>8 GB DDR2</td>
+                <td>16 GB DDR5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning">
+        ⚠️ Примечание: А в AMD пусть идет нахуй.
+    </div>
+</div>
+
+</body>
+</html>
